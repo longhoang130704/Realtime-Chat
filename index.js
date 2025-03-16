@@ -6,7 +6,8 @@ const app = express();
 
 // Config PORT and Run App
 const PORT = 3000
-const server = app.listen(PORT, () => console.log(`App run on ${PORT}`))
+const appName = process.env.APP_NAME
+const server = app.listen(PORT, () => console.log(`App ${appName} run on ${PORT}`))
 
 // Middleware static public
 app.use(express.static('public'));
